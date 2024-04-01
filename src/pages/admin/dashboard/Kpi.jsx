@@ -6,7 +6,8 @@ import Barchart from "./Barchart";
 import Linechart from "./Linechart";
 import Modal from "react-modal";
 import { useReactToPrint } from 'react-to-print';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import DashboardLayout from "../../swdashboard/dashboardlayout/DashboardLayout"
 
 const customStyles = {
   content: {
@@ -24,6 +25,7 @@ function Kpi() {
   const [SelectedOption, setSelectedOption] = useState("");
   //modal for modal popup
   const [IsOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const PrintRef = useRef()
 
@@ -44,6 +46,10 @@ function Kpi() {
   //   // navigate to error form page
   //   navigate("");
   // };
+
+  const handleClick = () => {
+    navigate("/invoicegen");
+  };
   
   //handle Print
   const handlePrint = useReactToPrint({
@@ -65,6 +71,7 @@ function Kpi() {
   };
 
   return (
+    <DashboardLayout>
     <div ref={PrintRef}>
       <div  className=" mt-40 mb-20 ml-40">
         <div className="grid grid-cols-2  gap-10">
@@ -214,7 +221,14 @@ function Kpi() {
           </div>
         </div>
       </div>
+
+      <button type="submit"
+      className="px-4 py-2 mr-8 mt-2 bg-gray-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+       onClick={handleClick}>
+        Go Back
+        </button>
     </div>
+    </DashboardLayout>
   );
 }
 

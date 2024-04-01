@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Layout from "../../components/layout/Layout";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -10,15 +10,22 @@ function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Email:", email, "Password:", password);
+    // toast.success("Successfully Logged In!");
 
-    navigate("/home");
+    // Trigger toast notification after a slight delay
+    setTimeout(() => {
+      toast.success("Successfully Logged In!");
+    }, 1000);
+
+     navigate("/dashboard");
+    // navigate("/dummy");
     setEmail("");
     setPassword("");
   };
 
-  const handleCreate = ()=>{
-    navigate('/createaccount')
-  }
+  const handleCreate = () => {
+    navigate("/createaccount");
+  };
   // const handleReset = () => {
   //   setName("");
   //   setEmail("");
@@ -26,7 +33,7 @@ function SignIn() {
   // };
 
   return (
-    <Layout>
+  
       <div>
         <div className="flex justify-center items-center h-screen  -mt-22">
           <form
@@ -85,7 +92,7 @@ function SignIn() {
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
-                Submit
+                SignIn
               </button>
 
               <button
@@ -99,7 +106,7 @@ function SignIn() {
           </form>
         </div>
       </div>
-    </Layout>
+    
   );
 }
 

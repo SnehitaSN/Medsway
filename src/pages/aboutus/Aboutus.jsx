@@ -8,7 +8,7 @@ function Aboutus() {
     <Layout>
       <div>
         {/* proud products section */}
-        <div className=" mt-40 mb-14 bg-gradient-to-r from-blue-50 to-white">
+        {/* <div className=" mt-40 mb-14 bg-gradient-to-r from-blue-50 to-white">
           <div className="mt-10">
             <h1 className="text-3xl font-bold font-body mb-8 mt-12 text-center text-gray-600">
               We are proud of our Products
@@ -45,28 +45,29 @@ function Aboutus() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* About us section */}
-        <div className="mt-8 mb-16">
-          <div>
-            <h3 className="text-center font-body text-blue-500 text-2xl font-bold">
+        <div className="mt-24 mb-16 font-sans">
+          <div className="">
+            <h3 className="text-center  text-blue-800 text-2xl font-bold">
               About
-              <span className="text-blue-300 font-body font-bold mb-8">Us</span>
+              <span className="text-blue-300  font-bold mb-8">Us</span>
             </h3>
           </div>
-          <div className="mt-8">
-            <h2 className="text-2xl font-body font-bold text-gray-600 text-center">
-              We're a team of Medicine Analysts
+          <div className="mt-6 mb-4">
+            <h2 className="text-xl  font-semibold text-gray-800 text-center">
+            Medsway is on a mission to empower India's pharmaceutical distribution<br/> 
+            network with technology and intelligence to deliver affordable medicines to 140bn people.
             </h2>
           </div>
           <div className="mt-4">
-            <p className="text-center font-body text-gray-600 text-lg font-normal">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur debitis officia unde mollitia voluptate <br></br>
-              Veniam mollitia molestiae officia aperiam fugiat sit
-              laudantium?Veniam mollitia molestiae officia aperiam fugiat sit
-              laudantium?<br></br>
+            <p className="text-center  text-gray-700 text-md font-normal">
+            Founded in 2022 by seasoned professionals with decades of industry <br/>
+            experience after graduating from premier educational institution in India.<br/>
+            The founding team combines diverse expertise and experience,<br/>
+            bringing together professionals from financial analysis, healthcare,<br/>
+            data science and full-stack engineering domains.
             </p>
           </div>
         </div>
@@ -76,25 +77,25 @@ function Aboutus() {
           <div className="flex justify-center">
             <div className="grid grid-cols-2 gap-6 mb-10">
               <div>
-                <div className="mt-4">
-                  <h3 className="text-start ml-32 font-body text-blue-600 text-2xl font-extrabold">
+                <div className="mt-4 font-sans">
+                  <h3 className="text-start ml-32  text-blue-600 text-2xl font-extrabold">
                     Our
-                    <span className="text-blue-500 font-body font-bold mb-8">
+                    <span className="text-blue-500  font-bold mb-8">
                       {" "}
                       Goals
                     </span>
                   </h3>
                 </div>
-                <div className="mt-4">
-                  <h2 className="text-3xl  font-bold font-body text-gray-600 text-start ml-32">
+                <div className="mt-4 font-sans">
+                  <h2 className="text-3xl  font-bold  text-gray-800 text-start ml-32">
                     To Upscale your business <br></br>
-                    <span className="text-3xl font-bold font-body text-gray-600 text-start mr-32">
+                    <span className="text-3xl font-bold  text-gray-800 text-start mr-32">
                       to the next level.
                     </span>
                   </h2>
                 </div>
-                <div className="mt-6">
-                  <p className="text-start ml-32 font-body text-gray-600 text-lg font-normal">
+                <div className="mt-6 fonr-sans">
+                  <p className="text-start ml-32  text-gray-700 text-lg font-normal">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Consectetur debitis officia unde mollitia
                     voluptateconsectetur adipisicing elit <br></br>
@@ -105,25 +106,25 @@ function Aboutus() {
               </div>
 
               <div>
-                <div className="mt-4">
-                  <h3 className="text-start ml-32 font-body text-blue-600 text-2xl font-extrabold">
+                <div className="mt-4 font-sans">
+                  <h3 className="text-start ml-32  text-blue-600 text-2xl font-extrabold">
                     Our
-                    <span className="text-blue-500 font-body font-bold mb-8">
+                    <span className="text-blue-500  font-bold mb-8">
                       {" "}
                       Vision
                     </span>
                   </h3>
                 </div>
-                <div className="mt-4">
-                  <h2 className="text-3xl ml-32 font-bold font-body text-gray-600 text-start">
+                <div className="mt-4 font-sans">
+                  <h2 className="text-3xl ml-32 font-bold  text-gray-800 text-start">
                     To Provide Solutions for <br></br>
-                    <span className="text-3xl font-bold font-body text-start text-gray-600 mr-20">
+                    <span className="text-3xl font-bold  text-start text-gray-800 mr-20">
                       growing companies
                     </span>
                   </h2>
                 </div>
-                <div className="mt-6">
-                  <p className="text-start ml-32 font-body text-gray-600 text-lg font-normal">
+                <div className="mt-6  font-sans">
+                  <p className="text-start ml-32  text-gray-700 text-lg font-normal">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Consectetur debitis officia unde mollitia
                     voluptateconsectetur adipisicing elit <br></br>
@@ -138,11 +139,11 @@ function Aboutus() {
         {/* our team section */}
         <div className="flex ">
           <div className="w-1/2  ">
-            <div className="mt-4 mb-6">
-              <h2 className="text-4xl font-bold font-body text-gray-600 text-center mt-4">
+            <div className="mt-4 mb-6 font-sans">
+              <h2 className="text-4xl font-bold  text-gray-700 text-center mt-4">
                 Our Team
               </h2>
-              <p className="text-md font-normal font-body text-gray-600 text-center mt-4 mb-4">
+              <p className="text-md font-normal  text-gray-700 text-center mt-4 mb-4">
                 We are a small team of professionals with over 12 years
                 <br />
                 of industry experience, all sharing a common <br></br>
@@ -152,7 +153,7 @@ function Aboutus() {
                 <br />
               </p>
 
-              <p className="text-md font-normal font-body text-gray-600 text-center">
+              <p className="text-md font-normal  text-gray-700 text-center">
                 Our executive team consists of seasoned healthcare <br />
                 professionals{" "}
                 <span className="text-blue-600">(yes, doctors!),</span> product
@@ -164,12 +165,12 @@ function Aboutus() {
               </p>
             </div>
           </div>
-          <div className="w-1/2  p-4 ">
+          <div className="w-1/2  p-4 font-sans">
             <div className="mt-4 mb-6">
-              <h2 className="text-4xl font-bold font-body text-gray-600 text-center mt-4 mb-4">
+              <h2 className="text-4xl font-bold  text-gray-800 text-center mt-4 mb-4">
                 We are hiring
               </h2>
-              <p className="text-md font-normal font-body text-gray-600 text-center">
+              <p className="text-md font-normal  text-gray-700 text-center">
                 We are currently looking for software engineers,
                 <br />
                 interns, database developers and UX designers to join <br />

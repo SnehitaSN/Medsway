@@ -1,5 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 6s forwards; /* Change duration as needed */
+    /* animation-timing-function: ease-in; */
+    animation-timing-function: ease;
+  
+   
+  }
+
+  .animate-slide-in1 {
+    animation: slideIn 10s forwards; /* Change duration as needed */
+    /* animation-timing-function: ease-in; */
+   
+    animation-timing-function: ease;
+  
+ 
+   
+  }
+
+  .animate-slide-in2 {
+    animation: slideIn 15s forwards; /* Change duration as needed */
+    /* animation-timing-function: ease-in; */
+    animation-timing-function: ease;
+  
+ 
+   
+  }
+
+
+  

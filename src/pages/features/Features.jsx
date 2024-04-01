@@ -1,157 +1,163 @@
 import React from "react";
-import img1 from "../../assets/img/dashboard.png"
-import img2 from '../../assets/img/sales.png'
-import img3 from "../../assets/img/rupee.png"
-import img4 from "../../assets/img/cost cutting.png"
-import img5 from "../../assets/img/inventory.png"
-import img6 from "../../assets/img/customer manage.png"
+
+import { SiSoundcharts } from "react-icons/si";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { GiCrystalGrowth } from "react-icons/gi";
+import { FaStackOverflow } from "react-icons/fa";
 
 import Layout from "../../components/layout/Layout";
+import { GiWavyChains } from "react-icons/gi";
+import { LiaUsersSolid } from "react-icons/lia";
 
 function Features() {
   return (
     <Layout>
-      <div className="mt-16 mb-20">
-        <div className="mt-36" >
-        <h1 className="text-2xl text-center  font-body  font-semibold text-gray-600 mb-8 ">Features</h1>
+      <div>
+        <div className="mt-16 mb-2">
+          <div className="container w-auto h-auto border-none mx-auto  rounded-xl px-10 py-20">
+            <div className="grid grid-cols-3 gap-4  font-sans">
+              <div className="flex flex-col items-center">
+                <div className="-mt-8 text-center">
+                  <div className="mx-auto -mt-2 mb-2 flex justify-center">
+                    <GiArtificialIntelligence className="w-16 h-16 text-blue-800" />
+                  </div>
+                  <h2 className="font-bold text-xl  text-center  text-gray-700  mb-2">
+                    AI Powered:
+                  </h2>
+                  <p className="text-center  font-sans  text-md ">
+                    Let our cutting-edge, data-driven algorithms <br />
+                    guide you in making critical buy and sell <br />
+                    decisions. Leverage the power of AI to <br />
+                    enhance transparency.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center font-sans">
+                <div className="-mt-6 text-center">
+                  <div className="mx-auto flex justify-center mb-2">
+                    <GiCrystalGrowth className="w-12 h-12 text-blue-800" />
+                  </div>
+                  <h2 className="font-bold text-xl    text-gray-700 text-center mb-2">
+                    Profits Growth:
+                  </h2>
+                  <p className="text-center  font-sans  text-md ">
+                    Medsway stands for growth!
+                    <br />
+                    Our workflows are designed <br />
+                    to provide you with opportunities
+                    <br />
+                    at every turn to increase profitability
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="-mt-6">
+                  <div className="mx-auto  mb-2 flex justify-center">
+                    <SiSoundcharts className="w-16 h-16 text-blue-800 " />
+                  </div>
+                  <div>
+                    <h2 className="font-bold text-xl  font-sans  text-gray-700 text-center mb-2">
+                      Insights hub:
+                    </h2>
+                  </div>
+                  <div className="flex justify-center">
+                    <p className="  text-center font-sanstext-md  ">
+                      Monitor the pulse of your business <br />
+                      with single click dashboards.
+                      <br />
+                      Discover hidden insights and prepare <br />
+                      for uncertainties in advance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       
-        <div className="container w-auto h-auto border-none mx-auto  rounded-xl px-10 py-20 bg-slate-100">
-          <div className="grid grid-cols-3 gap-4 ">
-            <div className="-mt-6">
-              <div className="mx-auto flex flex-1 justify-start mr-1 mb-2">
-              <img src={img1} alt="dashboard " className="w-20 h-auto   "/>
+
+        <div className=" -mt-12">
+          <div className="container w-auto h-auto border-none mx-auto  rounded-xl px-10 py-20">
+            <div className="grid grid-cols-3 gap-4  font-sans">
+              <div className="flex flex-col items-center">
+                <div className="-mt-8 text-center">
+                  <div className="mx-auto  mb-2 flex justify-center">
+                    <FaStackOverflow className="w-16 h-16 text-blue-800" />
+                  </div>
+                  <h2 className="font-bold text-xl  text-center  text-gray-800  mb-2">
+                    Stock flow optimizer:
+                  </h2>
+                  <p className="text-center  font-sans  text-md ">
+                    Effective inventory management is <br />
+                    the cornerstone of successful supply
+                    <br />
+                    chain network. With Medsway's predictive <br />
+                    analytics you can build an effective stock
+                    <br />
+                    management strategy for any store size.
+                  </p>
+                </div>
               </div>
 
-              <h2 className="font-bold text-xl  font-body  text-gray-700 text-start mb-4">
-              360 deg Dashboard
-              </h2>
-              <p className="text-start  font-body  text-md ">
-              Integrate local and industry <br></br> intelligence. Get all insights to <br></br>monitor pulse of your pharmacy.
-              </p>
-            </div>
-            <div className="-mt-6">
-              <div className="mx-auto flex flex-1 justify-start mr-12 mb-4">
-              <img src={img2} alt="dashboard " className="w-20 h-auto   "/>
+              <div className="flex flex-col items-center font-sans">
+                <div className="-mt-6 text-center">
+                  <div className="mx-auto flex justify-center mb-2">
+                    <GiWavyChains className="w-12 h-12 text-blue-800" />
+                  </div>
+                  <h2 className="font-bold text-xl    text-gray-800 text-center mb-2">
+                    Supply chain nexus:
+                  </h2>
+                  <p className="text-center  font-sans  text-md ">
+                    The adage goes like one <br/>
+                    size doesn't fit all...! <br/>
+                    With Medsway platform you can <br/>
+                    everage the vast network of <br/>
+                    suppliers to get the best deals <br/>
+                    on range of products.
+                  </p>
+                </div>
               </div>
 
-              <h2 className="font-bold text-xl  font-body  text-start   text-gray-700 mb-4">
-              Sales intelligence
-              </h2>
-              <p className="text-start  font-body  text-md">
-              Leverage ML models to know <br></br> changes in footfall, near-expiry <br></br>drugs and more.
-              </p>
-            </div>
-            <div className="-mt-10">
-              <div className="mx-auto flex flex-1 justify-start mr-12 mb-4">
-              <img src={img3} alt="dashboard " className="w-20 h-auto   "/>
+              <div className="flex flex-col items-center">
+                <div className="-mt-6">
+                  <div className="mx-auto  mb-2 flex justify-center">
+                    <LiaUsersSolid className="w-16 h-16 text-blue-800 " />
+                  </div>
+                  <div>
+                    <h2 className="font-bold text-xl  font-sans  text-gray-800 text-center mb-2">
+                      Customer experience catalyst:
+                    </h2>
+                  </div>
+                  <div className="flex justify-center">
+                    <p className="  text-center font-sanstext-md  ">
+                      Discover the exponential potential <br />
+                      of customer satisfaction in <br />
+                      enriching  your sales journey.<br/>
+                      Plug-in Medsway functionalities<br />
+                      to enhance customer experience <br/>
+                      and expanding your loyalty nexus.
+                      
+                    </p>
+                  </div>
+                </div>
               </div>
-
-              <h2 className="font-bold  font-body  text-xl text-start  text-gray-700 mb-4">
-              Guaranteed Profits
-              </h2>
-              <p className="text-start  font-body  text-md ">
-              Its a promise we won't hesitate to make. Witness marked increase in profits within 3 months or less.
-              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-12 mb-20">
-        {/* <h1 className="text-5xl text-center   font-body  font-bold mb-8 ">Features</h1> */}
-        <div className="container w-auto h-auto border-none mx-auto  rounded-xl px-10 py-20 bg-slate-100">
-          <div className="grid grid-cols-3 gap-4 ">
-            <div className="-mt-6">
-              <div className="mx-auto flex flex-1 justify-start mr-1 mb-2">
-              <img src={img4} alt="dashboard " className="w-20 h-auto   "/>
-              </div>
-
-              <h2 className="font-bold text-xl  font-body  text-gray-700 text-start mb-4">
-              Cost cutting
-              </h2>
-              <p className="text-start  font-body  text-md ">
-              Tighter controls on inventory <br/>
-               with zero wastage and timely <br/> payments to ensure efficient  <br/>budgeting and growth.
-              </p>
-            </div>
-            <div className="-mt-10">
-              <div className="mx-auto flex flex-1 justify-start mr-12 mb-4">
-              <img src={img5} alt="dashboard " className="w-20 h-auto   "/>
-              </div>
-
-              <h2 className="font-bold text-xl  font-body  text-start   text-gray-700 mb-4">
-              Inventory management
-              </h2>
-              <p className="text-start  font-body  text-md">
-              Get timely and assured supplies.<br/> Maintain sufficient inventories <br/> with vast network of suppliers.
-              </p>
-            </div>
-            <div className="-mt-10">
-              <div className="mx-auto flex flex-1 justify-start mr-12 mb-4">
-              <img src={img6} alt="dashboard " className="w-20 h-auto   "/>
-              </div>
-
-              <h2 className="font-bold text-xl  font-body  text-start  text-gray-700 mb-4">
-              Customer relationship
-              </h2>
-              <p className="text-start  font-body  text-md ">
-              Enhanced customer relationship,<br/> going beyond with personalized <br/>solutions and exclusive offers.
-              </p>
-            </div>
-          </div>
+      <div>
+        <div className="font-sans flex justify-end ">
+          <a
+            href="/faqws"
+            target="_blank"
+            className="mr-10 mb-4 text-gray-900 font-bold border-2 w-50 h-50 bg-slate-300 px-2 py-2"
+          >
+            FAQ's
+          </a>
         </div>
       </div>
-
-      {/* <div className="mt-12 mb-20">
-        <h1 className="text-5xl text-center  font-body  font-bold mb-8 ">Features</h1>
-        <div className="container w-auto h-auto border-none mx-auto  rounded-xl px-10 py-20 bg-slate-100">
-          <div className="grid grid-cols-3 gap-4 ">
-            <div className="-mt-6">
-              <div className="mx-auto flex flex-1 justify-start mr-1 mb-2">
-                <GiHobbitDoor className="w-16 h-16" style={{ color: "blue" }} />
-              </div>
-
-              <h2 className="font-bold  font-body  text-3xl text-gray-700 text-start mb-4">
-                Advance 256-bit<br></br>encryption
-              </h2>
-              <p className="text-start  font-body  text-md ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                esse quasi consectetur nihil voluptate quod.
-              </p>
-            </div>
-            <div className="-mt-6">
-              <div className="mx-auto flex flex-1 justify-start mr-12 mb-4">
-                <FcCollaboration
-                  className="w-16 h-16 -mt-3"
-                  style={{ color: "blue" }}
-                />
-              </div>
-
-              <h2 className="font-bold  font-body  text-3xl text-start   text-gray-700 mb-4">
-                Simple Collaboration<br></br> tools
-              </h2>
-              <p className="text-start  font-body  text-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                esse quasi consectetur nihil voluptate quod.
-              </p>
-            </div>
-            <div className="-mt-10">
-              <div className="mx-auto flex flex-1 justify-start mr-12 mb-4">
-                <FaRobot className="w-16 h-16" style={{ color: "blue" }} />
-              </div>
-
-              <h2 className="font-bold text-3xl  font-body  text-start  text-gray-700 mb-4">
-                Customizable AI<br></br> features
-              </h2>
-              <p className="text-start  font-body  text-md ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-                esse quasi consectetur nihil voluptate quod.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </Layout>
   );
 }

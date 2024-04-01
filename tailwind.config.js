@@ -82,7 +82,8 @@ module.exports = {
         },
       },
       fontFamily:{
-      body:['ubuntu']
+      body:['ubuntu'],
+      sans: ['IBM Plex Sans', 'sans-serif'],
       },
       boxShadow: {
         // light
@@ -137,4 +138,10 @@ module.exports = {
     },
   ],
   plugins: [require('@headlessui/tailwindcss'), require('@tailwindcss/forms')],
+  variants:{
+    extend:{
+      display:["focus-group"]
+    }
+  }
+  
 };
