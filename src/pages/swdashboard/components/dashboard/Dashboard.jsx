@@ -23,8 +23,6 @@ function Dashboard() {
 
   const [IsOpen, setIsOpen] = useState(false);
 
-
-
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -102,7 +100,6 @@ function Dashboard() {
             {SelectedOption && <p>You selected : {SelectedOption}</p>}
           </div>
         </div>
-
         {/* cards */}
         <div className="grid grid-cols-4 gap-[30px] mt-[25px] pb-[15px]">
           <div>
@@ -121,7 +118,7 @@ function Dashboard() {
                 Rs.76000
               </h1>
               <h4 className="text-gray-700 text-sm leading-[17px] font-bold">
-                up <span className="text-green-600 text-sm">13%</span> YoY
+                up <span className="text-green-600 text-sm ">13%</span> YoY
               </h4>
             </div>
           </div>
@@ -152,34 +149,40 @@ function Dashboard() {
               </h4>
             </div>
           </div>
-        </div> <hr className="mt-2 mb-6"/>
-
+        </div>{" "}
+        <hr className="mt-2 mb-6" />
         {/* bar chart & donut chart */}
-        <div className=" grid grid-cols-2 gap-20 mt-6 mb-6">
-          <div className="flex justify-center"><Barchart/></div>
-          <div className="flex justify-end"><Donutchart/></div>
-        </div><hr  className="mt-2 mb-6"/>
-
+        <div className="grid grid-cols-2 gap-10 mt-6 mb-6">
+          <div className="flex justify-center items-center">
+            <div><Barchart/></div>
+          </div>
+          <div className="flex justify-center ">
+            <Donutchart/>
+          </div>
+        </div>
+        <hr className="mt-2 mb-6" />
         {/* horizaontal bar,scatter,horizontal bar */}
-
-        <div className=" grid grid-cols-2 gap-20 mt-6 mb-6">
-          <div className="flex justify-center"><Horizontalchart/></div>
-          <div className="flex justify-end"><Scatterchart/></div>
-        </div><hr  className="mt-2 mb-6"/>
-
-        {/* <div className="grid grid-cols-3 gap-10 mt-6 bg-blue-300  mb-4">
-          <div className="w-full max-w-md mx-auto ml-64"> 
-          <div className=" flex justify-start ml-72"><Horizontalchart/></div></div>
-          <div className="flex justify-center">Scatter</div>
-          <div className="flex justify-end">Horiz 2</div>
-        </div> */}
-
-<div className="mt-2 mb-6">
-  <div className="flex justify-center">
-    <Horizontalchart2/></div>
-</div>
+        <div>
+          <div className="grid grid-cols-1 gap-20 mt-6 mb-6 md:grid-cols-3">
+            <div className="flex justify-center">
+              <div className="w-full md:w-64 ml-32">
+                <Horizontalchart />
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-full md:w-64">
+                <Scatterchart />
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="w-full md:w-64 -ml-60">
+                <Horizontalchart2 />
+              </div>
+            </div>
+          </div>
+          <hr className="mt-2 mb-6" />
+        </div>
         {/* 3 buttons */}
-
         <div className="mt-10 mb-18 ">
           <div className="flex flex-1 justify-center space-x-14">
             <div className="text-white font-normal">
@@ -187,7 +190,7 @@ function Dashboard() {
                 onClick={handleDownload}
                 className="border-1 ml-4 bg-gray-700  rounded-lg px-8 py-2 text-white font-bold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-300 "
               >
-               <h3>Download</h3> 
+                <h3>Download</h3>
               </button>
             </div>
 
@@ -205,7 +208,7 @@ function Dashboard() {
                 onClick={openModal}
                 className="border-1 bg-gray-700  rounded-lg px-8 py-2 text-white font-bold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-300 "
               >
-               <h3>  Report here</h3>
+                <h3> Report here</h3>
               </button>
               <Modal isOpen={IsOpen} style={customStyles}>
                 <div className="flex flex1 justify-center  space-x-28">

@@ -55,8 +55,8 @@ function Navbar() {
               >
                 Contact Us
               </Link>
-              <button className="flex -mt-1.5 bg-gray-500 font-sans font-medium text-xl  text-white py-1 px-6 h-13 border-2  rounded-3xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-800 duration-300 ">
-                <Link to={"/signin"}>SignIn</Link>
+              <button className="flex -mt-1.5 bg-blue-500 font-sans font-medium text-normal  text-white py-1 px-6 h-13 border-2  rounded transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-800 duration-300 ">
+                <Link to={"/signin"}>Sign in</Link>
               </button>
             </div>
           </div>

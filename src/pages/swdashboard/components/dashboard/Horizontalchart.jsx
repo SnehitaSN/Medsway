@@ -49,8 +49,8 @@ function Horizontalchart() {
     <div className="w-full max-w-md mx-auto -mr-20 ">
       <ComposedChart
         layout="vertical"
-        width={500}
-        height={400}
+        width={400}
+        height={300}
         data={data}
         margin={{
           top: 20,

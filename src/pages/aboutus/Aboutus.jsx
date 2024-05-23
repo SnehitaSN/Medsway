@@ -1,5 +1,5 @@
 import React from "react";
-import Testimonial from "../testimonial/Testimonial";
+// import Testimonial from "../testimonial/Testimonial";
 
 import Layout from "../../components/layout/Layout";
 
@@ -143,20 +143,20 @@ function Aboutus() {
               <h2 className="text-4xl font-bold  text-gray-700 text-center mt-4">
                 Our Team
               </h2>
-              <p className="text-md font-normal  text-gray-700 text-center mt-4 mb-4">
+              <p className="text-md font-normal font-sans text-gray-700 text-center mt-4 mb-4">
                 We are a small team of professionals with over 12 years
                 <br />
                 of industry experience, all sharing a common <br></br>
-                <span className="text-md font-bold font-body text-blue-600 text-center mt-2">
+                <span className="text-md font-normal font-sans text-blue-800 text-center mt-2">
                   vision to make India's healthcare ecosystem future ready.
                 </span>
                 <br />
               </p>
 
-              <p className="text-md font-normal  text-gray-700 text-center">
+              <p className="text-md font-normal font-sans text-gray-700 text-center">
                 Our executive team consists of seasoned healthcare <br />
                 professionals{" "}
-                <span className="text-blue-600">(yes, doctors!),</span> product
+                <span className="text-blue-800 text-md font-sans">(yes, doctors!),</span> product
                 managers,
                 <br />
                 engineers and designers from premier Indian institutions.
@@ -167,10 +167,10 @@ function Aboutus() {
           </div>
           <div className="w-1/2  p-4 font-sans">
             <div className="mt-4 mb-6">
-              <h2 className="text-4xl font-bold  text-gray-800 text-center mt-4 mb-4">
+              <h2 className="text-4xl font-bold font-sans text-gray-800 text-center mt-4 mb-4">
                 We are hiring
               </h2>
-              <p className="text-md font-normal  text-gray-700 text-center">
+              <p className="text-md font-normal font-sans text-gray-700 text-center">
                 We are currently looking for software engineers,
                 <br />
                 interns, database developers and UX designers to join <br />
@@ -180,14 +180,14 @@ function Aboutus() {
                 <br />
                 will get back to you within a week.
                 <br /> <br />
-                <span className="text-blue-600 ">Note:</span> We are a remote
+                <span className="text-blue-600 font-sans ">Note:</span> We are a remote
                 first company.
               </p>
             </div>
           </div>
         </div>
 
-        <Testimonial />
+        {/* <Testimonial /> */}
       </div>
     </Layout>
   );

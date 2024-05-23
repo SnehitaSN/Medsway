@@ -21,8 +21,8 @@ function Scatterchart() {
   return (
     <div className="w-full max-w-md mx-auto -mr-25">
       <ScatterChart
-      width={500} // Adjust width to make the chart visible
-      height={400}
+      width={400} // Adjust width to make the chart visible
+      height={300}
         margin={{
           top: 50,
           right: 50,

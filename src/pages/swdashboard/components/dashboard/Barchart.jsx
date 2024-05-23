@@ -31,7 +31,7 @@ const data = [
 function Barchart() {
   return (
     <div className="w-full max-w-md mx-auto -mr-20">
-      <BarChart width={590} height={350} data={data}>
+      <BarChart width={400} height={300} data={data}>
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />

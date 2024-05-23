@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import Layout from "../../components/layout/Layout";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ function SignIn() {
       toast.success("Successfully Logged In!");
     }, 1000);
 
-     navigate("/dashboard");
+    navigate("/dashboard");
     // navigate("/dummy");
     setEmail("");
     setPassword("");
@@ -33,23 +34,23 @@ function SignIn() {
   // };
 
   return (
-  
+    <Layout>
       <div>
         <div className="flex justify-center items-center h-screen  -mt-22">
           <form
             onSubmit={handleSubmit}
             // onReset={handleReset}
-            className="bg-white  border -1 border-gray-800 shadow-xl rounded px-8 pt-6 pb-8 mb-4"
+            className="bg-white  border -1 border-gray-800 shadow-xl  px-8 pt-6 pb-8 mb-4"
           >
             <div className=" mb-4 -mt-2">
-              <h1 className="font-body text-blue-700 font-bold text-center text-3xl ">
-                SignIn
+              <h1 className="font-sans text-blue-700 font-normal text-center text-xl ">
+                Sign in
               </h1>
             </div>
             <div>
               <label
                 for="email"
-                className="block text-gray-700 text-xl font-body font-bold mb-2"
+                className="block text-gray-700 text-xl font-sans font-bold mb-2"
               >
                 {" "}
                 Email
@@ -61,7 +62,7 @@ function SignIn() {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="shadow appearance-none border text-lg font-body rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border text-lg font-sans rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <br></br>
@@ -69,7 +70,7 @@ function SignIn() {
             <div>
               <label
                 for="password"
-                className="block text-gray-700 text-xl font-body font-bold mb-2"
+                className="block text-gray-700 text-xl font-sans font-bold mb-2"
               >
                 {" "}
                 Passowrd
@@ -82,7 +83,7 @@ function SignIn() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="shadow appearance-none border text-lg font-body rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border text-lg font-sans rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
             <br></br>
@@ -90,15 +91,15 @@ function SignIn() {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-blue-500 hover:bg-blue-700 font-sans text-white font-normal py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
-                SignIn
+                Sign in
               </button>
 
               <button
                 type="submit"
                 onClick={handleCreate}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-sans font-normal py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 Create Account
               </button>
@@ -106,7 +107,7 @@ function SignIn() {
           </form>
         </div>
       </div>
-    
+    </Layout>
   );
 }
 

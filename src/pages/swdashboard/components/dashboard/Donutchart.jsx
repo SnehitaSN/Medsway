@@ -28,10 +28,12 @@ const data01 = [
   },
 ];
 function Donutchart() {
+
+  
   return (
     <div  className="w-full max-w-md mx-auto -mr-20">
            <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={400} height={400}>
+        <PieChart width={400} height={300}>
           <Pie
             dataKey="value"
             isAnimationActive={false}
