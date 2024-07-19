@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Body from "./pages/body/Body";
-import Home from "./pages/home/Home";
+// import Home from "./pages/home/Home";
 import Product from "./pages/product/Product";
 import Pricing from "./pages/pricing/Pricing";
 import Aboutus from "./pages/aboutus/Aboutus";
@@ -31,6 +31,8 @@ import Invoice from "./pages/swdashboard/components/billing/Invoice";
 import Faqws from "./pages/faqws/Faqws";
 import toast from "react-hot-toast";
 import Dummy from "./pages/dummy/Dummy";
+import Privacy from "./components/htmlpages/Privacy";
+import Terms from "./components/htmlpages/Terms";
 
 // Define a custom hook for authentication
 function useAuth() {
@@ -61,17 +63,19 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" 
-          element={<Body/>} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Body />} />
+        {/* <Route path="/home" element={<Home />} /> */}
         <Route path="/product" element={<Product />} />
         <Route path="/features" element={<Features />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="privacy" element={<Privacy/>}/>
+        <Route path="/terms" element={<Terms/>}/>
+
         <Route
           path="/signin"
-          element={<SignIn authenticate={authenticate}  />}
+          element={<SignIn authenticate={authenticate} />}
         />
 
         <Route path="/signup" element={<SignUp />} />
@@ -94,7 +98,7 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/invoice" element={<Invoice />} />
         <Route path="/faqws" element={<Faqws />} />
-        <Route path="/dummy" element={<Dummy/>}/>
+        <Route path="/dummy" element={<Dummy />} />
       </Routes>
     </Router>
   );

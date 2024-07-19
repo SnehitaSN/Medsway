@@ -1,196 +1,146 @@
 import React from "react";
-// import Testimonial from "../testimonial/Testimonial";
-
 import Layout from "../../components/layout/Layout";
 
 function Aboutus() {
   return (
     <Layout>
       <div>
-        {/* proud products section */}
-        {/* <div className=" mt-40 mb-14 bg-gradient-to-r from-blue-50 to-white">
-          <div className="mt-10">
-            <h1 className="text-3xl font-bold font-body mb-8 mt-12 text-center text-gray-600">
-              We are proud of our Products
-            </h1>
-            <p className="text-center text-lg font-body font-normal mt-4">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.Ipsa
-              aspernatur necessitatibus esse harum, voluptates providen{" "}
-              <br></br>
-              asperiores commodi itaque dolorum nemo?
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <div className="grid grid-cols-3 gap-18 mt-10 mb-10">
-              <div className="">
-                <img
-                  alt="ourproducts"
-                  className="ml-10 w-64 h-64 border-1 shadow-white border-zinc-100 rounded-xl"
-                  src="https://images.unsplash.com/photo-1618044733300-9472054094ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzaCUyMGZsb3d8ZW58MHx8MHx8fDA%3D"
-                />
-              </div>
-              <div>
-                <img
-                  alt="ourproducts"
-                  className="ml-10 w-64 h-64 border-1 shadow-white border-zinc-100 rounded-xl"
-                  src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWVkaWNpbmVzfGVufDB8fDB8fHww"
-                />
-              </div>
-              <div>
-                <img
-                  alt="ourproducts"
-                  className="ml-10 w-64 h-64 border-1 shadow-white border-zinc-100 rounded-xl"
-                  src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhbnNhY3Rpb25zfGVufDB8fDB8fHww"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         {/* About us section */}
-        <div className="mt-24 mb-16 font-sans">
-          <div className="">
-            <h3 className="text-center  text-blue-800 text-2xl font-bold">
+        <div className="mt-10 md:mt-40 flex flex-col md:flex-row justify-between items-center">
+          {/* Left Content */}
+          <div className="w-full mt-10 md:w-1/2 mb-10 md:mb-0">
+            <h1 className="text-4xl text-blue-800 font-bold text-center mb-4">
               About
-              <span className="text-blue-300  font-bold mb-8">Us</span>
-            </h3>
-          </div>
-          <div className="mt-6 mb-4">
-            <h2 className="text-xl  font-semibold text-gray-800 text-center">
-            Medsway is on a mission to empower India's pharmaceutical distribution<br/> 
-            network with technology and intelligence to deliver affordable medicines to 140bn people.
-            </h2>
-          </div>
-          <div className="mt-4">
-            <p className="text-center  text-gray-700 text-md font-normal">
-            Founded in 2022 by seasoned professionals with decades of industry <br/>
-            experience after graduating from premier educational institution in India.<br/>
-            The founding team combines diverse expertise and experience,<br/>
-            bringing together professionals from financial analysis, healthcare,<br/>
-            data science and full-stack engineering domains.
+            </h1>
+            <p className="text-gray-700 text-xl text-center px-4 md:ml-8">
+              Medsway is on a mission to empower India's pharmaceutical
+              distribution network with technology and intelligence to deliver
+              affordable medicines to 140 billion people.
             </p>
+            <div className="flex justify-center mt-6">
+              <a
+                href="https://www.linkedin.com/company/medsway"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-600 text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-blue-800"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="w-full md:w-1/2">
+            <img
+              src="https://media.istockphoto.com/id/1572596654/photo/star-shape-and-hands-of-business-people-with-peace-team-building-motivation-and-below-support.webp?b=1&s=170667a&w=0&k=20&c=hiP9ARTq_QoILSvfT5P_E2RBP9QNBvDhLYHh0xIrIko="
+              alt="aboutus"
+              className="w-full h-auto rounded-lg"
+            />
           </div>
         </div>
 
-        {/* our goals & visions section */}
-        <div className="bg-blue-50 mt-20 mb-12">
+        {/* Our goals & visions section */}
+        <div className="bg-blue-50 mt-20 md:mt-12 mb-12 px-4 md:px-0">
           <div className="flex justify-center">
-            <div className="grid grid-cols-2 gap-6 mb-10">
-              <div>
-                <div className="mt-4 font-sans">
-                  <h3 className="text-start ml-32  text-blue-600 text-2xl font-extrabold">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Goals Section */}
+              <div className="mb-10 md:ml-16 md:mr-8">
+                <div className="mt-4">
+                  <h3 className="text-2xl text-blue-600 font-bold text-center md:text-start mb-4">
                     Our
-                    <span className="text-blue-500  font-bold mb-8">
-                      {" "}
-                      Goals
-                    </span>
+                    <span className="text-blue-500 font-bold"> Goals</span>
                   </h3>
                 </div>
-                <div className="mt-4 font-sans">
-                  <h2 className="text-3xl  font-bold  text-gray-800 text-start ml-32">
-                    To Upscale your business <br></br>
-                    <span className="text-3xl font-bold  text-gray-800 text-start mr-32">
-                      to the next level.
-                    </span>
+                <div className="mt-4">
+                  <h2 className="text-3xl font-normal text-gray-800 text-center md:text-start mb-4">
+                    To Upscale your business <br />
+                    to the next level
                   </h2>
                 </div>
-                <div className="mt-6 fonr-sans">
-                  <p className="text-start ml-32  text-gray-700 text-lg font-normal">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur debitis officia unde mollitia
-                    voluptateconsectetur adipisicing elit <br></br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    <br></br>
+                <div className="mt-4">
+                  <p className="text-lg text-gray-700 font-normal text-center md:text-start">
+                    <span className="text-3xl font-extrabold mt-1"> &#8226;</span>{" "}
+                    Establish a connected network of pharmacies and distributors
+                    in India and other emerging economies. <br />
+                    <span className="text-3xl font-extrabold mt-1"> &#8226;</span>{" "}
+                    Improve the accessibility to life-saving medicines such as
+                    TB drugs, retroviral therapies and orphan drugs.
                   </p>
                 </div>
               </div>
 
-              <div>
-                <div className="mt-4 font-sans">
-                  <h3 className="text-start ml-32  text-blue-600 text-2xl font-extrabold">
+              {/* Vision Section */}
+              <div className="mb-10 md:ml-8 md:mr-16">
+                <div className="mt-4">
+                  <h3 className="text-2xl text-blue-600 font-bold text-center md:text-start mb-4">
                     Our
-                    <span className="text-blue-500  font-bold mb-8">
-                      {" "}
-                      Vision
-                    </span>
+                    <span className="text-blue-500 font-bold"> Vision</span>
                   </h3>
                 </div>
-                <div className="mt-4 font-sans">
-                  <h2 className="text-3xl ml-32 font-bold  text-gray-800 text-start">
-                    To Provide Solutions for <br></br>
-                    <span className="text-3xl font-bold  text-start text-gray-800 mr-20">
-                      growing companies
-                    </span>
+                <div className="mt-4">
+                  <h2 className="text-3xl font-normal text-gray-800 text-center md:text-start mb-4">
+                    To Provide Solutions for <br />
+                    growing companies
                   </h2>
                 </div>
-                <div className="mt-6  font-sans">
-                  <p className="text-start ml-32  text-gray-700 text-lg font-normal">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur debitis officia unde mollitia
-                    voluptateconsectetur adipisicing elit <br></br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    <br></br>
+                <div className="mt-4">
+                  <p className="text-lg text-gray-700 font-normal text-center md:text-start">
+                    <span className="text-3xl font-extrabold mt-1"> &#8226;</span>{" "}
+                    Redefine the pharmaceutical distribution ecosystem. <br />
+                    <span className="text-3xl font-extrabold mt-1"> &#8226;</span>{" "}
+                    Leverage AI and cutting-edge technologies to empower
+                    suppliers, retailers and patients. <br />
+                    <span className="text-3xl font-extrabold mt-1"> &#8226;</span>{" "}
+                    Ensure the accessibility of life-saving medicines.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* our team section */}
-        <div className="flex ">
-          <div className="w-1/2  ">
-            <div className="mt-4 mb-6 font-sans">
-              <h2 className="text-4xl font-bold  text-gray-700 text-center mt-4">
+
+        {/* Our team section */}
+        <div className="flex flex-col mb-6 md:flex-row">
+          <div className="w-full md:w-1/2 px-4 mb-8">
+            <div className="mt-4">
+              <h2 className="text-4xl font-normal text-gray-700 text-center md:text-left mb-4">
                 Our Team
               </h2>
-              <p className="text-md font-normal font-sans text-gray-700 text-center mt-4 mb-4">
+              <p className="text-lg font-normal text-gray-700 text-center md:text-left mb-4">
                 We are a small team of professionals with over 12 years
-                <br />
-                of industry experience, all sharing a common <br></br>
-                <span className="text-md font-normal font-sans text-blue-800 text-center mt-2">
-                  vision to make India's healthcare ecosystem future ready.
-                </span>
-                <br />
+                of industry experience, all sharing a common{" "}
+                <span className="text-blue-800">vision to make India's healthcare ecosystem future ready.</span>
               </p>
-
-              <p className="text-md font-normal font-sans text-gray-700 text-center">
-                Our executive team consists of seasoned healthcare <br />
-                professionals{" "}
-                <span className="text-blue-800 text-md font-sans">(yes, doctors!),</span> product
-                managers,
-                <br />
+              <p className="text-lg font-normal text-gray-700 text-center md:text-left">
+                Our executive team consists of seasoned healthcare
+                professionals <span className="text-blue-800">(yes, doctors!),</span> product managers,
                 engineers and designers from premier Indian institutions.
-                <br />
                 Backed by serial entrepreneurs.
               </p>
             </div>
           </div>
-          <div className="w-1/2  p-4 font-sans">
-            <div className="mt-4 mb-6">
-              <h2 className="text-4xl font-bold font-sans text-gray-800 text-center mt-4 mb-4">
+
+          <div className="w-full md:w-1/2 px-4">
+            <div className="mt-4">
+              <h2 className="text-4xl font-normal text-gray-700 text-center md:text-left mb-4">
                 We are hiring
               </h2>
-              <p className="text-md font-normal font-sans text-gray-700 text-center">
+              <p className="text-lg font-normal text-gray-700 text-center md:text-left mb-4">
                 We are currently looking for software engineers,
-                <br />
-                interns, database developers and UX designers to join <br />
-                our team. If you share our vision and are skilled in any <br />
-                of these areas, write to us at{" "}
-                <span className="text-blue-600">team@medsway.in</span> and we{" "}
-                <br />
+                interns, database developers and UX designers to join our team.
+                If you share our vision and are skilled in any of these areas,
+                write to us at <span className="text-blue-600">team@medsway.in</span> and we
                 will get back to you within a week.
-                <br /> <br />
-                <span className="text-blue-600 font-sans ">Note:</span> We are a remote
-                first company.
+                <br /><br />
+                <span className="text-blue-600">Note:</span> We are a remote-first company.
               </p>
             </div>
           </div>
         </div>
-
-        {/* <Testimonial /> */}
       </div>
     </Layout>
   );
 }
 
 export default Aboutus;
+

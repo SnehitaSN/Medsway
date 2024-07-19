@@ -1,0 +1,30 @@
+.navbar-container {
+  /* Your general styles here */
+
+  /* Media queries for mobile devices */
+  @media (max-width: 768px) {
+    .navbar {
+      /* Adjust styles for mobile */
+      padding: 10px; /* Example: Adjust padding for mobile */
+    }
+    .navbar-brand {
+      font-size: 2rem; /* Example: Adjust font size for mobile */
+    }
+    .navbar-links {
+      flex-direction: column; /* Example: Stack links vertically for mobile */
+      gap: 10px; /* Example: Add gap between links */
+    }
+    .signin-button {
+      margin-top: 10px; /* Example: Adjust margin for mobile */
+    }
+  }
+
+  /* Media queries for tablet devices */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+      /* Adjust styles for tablet */
+      padding: 20px; /* Example: Adjust padding for tablet */
+    }
+    /* Adjust other styles as needed for tablet devices */
+  }
+}

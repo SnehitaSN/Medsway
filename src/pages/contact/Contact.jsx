@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../components/layout/Layout";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-// import { FaSalesforce } from "react-icons/fa6";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -33,24 +32,24 @@ function Contact() {
 
   return (
     <Layout>
-      <div>
-        <div className="mt-40 mb-10">
-          <h1 className="text-3xl font-boldfont-sans text-center text-gray-800">
+      <div className="container mx-auto px-4">
+        <div className="md:mt-40 mb-10 mt-24">
+          <h1 className="text-4xl text-gray-700 font-bold font-sans text-center">
             Get in touch with us
           </h1>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 bg-blue-100 rounded-3xl border-1 mb-6">
-          <div className="ml-20 mt-8">
-            <h2 className="text-2xl font-bold font-sans mr-4 mb-4 text-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-blue-100 rounded-3xl p-8 border-1 mb-8 mt-2">
+          <div className="px-6 py-8">
+            <h2 className="text-2xl font-bold font-sans mb-4 text-gray-800">
               Drop us a message
             </h2>
-            <p className="text-lg font-sansfont-normal text-gray-700">
+            <p className="text-lg font-sans font-normal text-gray-700 mb-6">
               We will get back to you as soon as possible
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-6 mt-4">
-              <div className="mb-2">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-sans font-medium text-gray-700"
@@ -68,7 +67,7 @@ function Contact() {
                   className="mt-1 block w-full font-sans border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
-              <div className="mb-2">
+              <div>
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium font-sans text-gray-700"
@@ -86,7 +85,7 @@ function Contact() {
                   className="mt-1 block w-full font-sans border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
-              <div className="mb-2">
+              <div>
                 <label
                   htmlFor="phone"
                   className="block text-sm font-sans font-medium text-gray-700"
@@ -104,7 +103,7 @@ function Contact() {
                   className="mt-1 block w-full font-sans border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
-              <div className="mb-2">
+              <div>
                 <label
                   htmlFor="address"
                   className="block text-sm font-sans font-medium text-gray-700"
@@ -122,7 +121,7 @@ function Contact() {
                   className="mt-1 block w-full font-sans border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
-              <div className="mb-2">
+              <div>
                 <label
                   htmlFor="message"
                   className="block text-sm font-sans font-medium text-gray-700"
@@ -139,10 +138,10 @@ function Contact() {
                   className="mt-1 block w-full font-sans border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 ></textarea>
               </div>
-              <div className="mb-2">
+              <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center font-sans py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Submit
                 </button>
@@ -150,59 +149,38 @@ function Contact() {
             </form>
           </div>
 
-          {/* for enquiry */}
-
-          <div className="mt-6">
-            <div className="flex flex-1 justify-center space-x-4">
-              <div className="mt-6 ml-2 ">
-                <FaPhone
-                  className="w-10 h-10 mt-3 "
-                  style={{ color: "#1e40af" }}
-                />
-              </div>
-              <div className="mt-6">
-                <h3 className="text-xl font-sans font-semibold text-gray-800 mr-14 ">
-                  + 1800 145 276
-                </h3>
-                <p className="text-lg font-normal font-sans ml-6 text-gray-700">
-                  Free Support
-                </p>
-              </div>
+          {/* Contact Details Section */}
+          <div className="flex flex-col justify-center items-center md:items-start py-8">
+            <div className="flex items-center space-x-4 mb-4">
+              <a href="tel:+9986177461" className="flex items-center space-x-4">
+                <FaPhone className="w-10 h-10 text-blue-600" />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    +9986177461
+                  </h3>
+                  <p className="text-lg font-normal text-gray-700">
+                    Free Support
+                  </p>
+                </div>
+              </a>
             </div>
 
-            <div className="flex flex-1 justify-center space-x-4">
-              <div className="mt-4 ml-2">
-                <MdEmail
-                  className="w-10 h-10 mt-3"
-                  style={{ color: "#1e40af" }}
-                />
-              </div>
-              <div className="mt-6 ">
-                <h3 className="text-xl font-sans font-semibold text-gray-800 ml-4 ">
-               team@medsway.in
-                </h3>
-                <p className="text-lg font-normal font-sans ml-6 text-gray-700">
-                  Help Email Support
-                </p>
-              </div>
+            <div className="flex items-center space-x-4">
+              <a
+                href="mailto:team@medsway.in"
+                className="flex items-center space-x-4"
+              >
+                <MdEmail className="w-10 h-10 text-blue-600" />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    team@medsway.in
+                  </h3>
+                  <p className="text-lg font-normal text-gray-700">
+                    Help Email Support
+                  </p>
+                </div>
+              </a>
             </div>
-            {/* 
-            <div className="flex flex-1 justify-center space-x-4">
-              <div className="mt-4">
-                <FaSalesforce
-                  className="w-12 h-12 mt-3"
-                  style={{ color: "#4338ca" }}
-                />
-              </div>
-              <div className="mt-6">
-                <h3 className="text-2xl font-body font-semibold ml-8 ">
-                  sales@medsway.com
-                </h3>
-                <p className="text-lg font-normal font-body ml-8 text-gray-600">
-                  Sales Enquiry
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -211,3 +189,4 @@ function Contact() {
 }
 
 export default Contact;
+

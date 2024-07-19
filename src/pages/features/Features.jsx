@@ -1,161 +1,172 @@
 import React from "react";
-
 import { SiSoundcharts } from "react-icons/si";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { GiCrystalGrowth } from "react-icons/gi";
+import {
+  GiArtificialIntelligence,
+  GiCrystalGrowth,
+  GiWavyChains,
+} from "react-icons/gi";
 import { FaStackOverflow } from "react-icons/fa";
-
-import Layout from "../../components/layout/Layout";
-import { GiWavyChains } from "react-icons/gi";
 import { LiaUsersSolid } from "react-icons/lia";
+import { RiArrowRightSLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
+import Layout from "../../components/layout/Layout";
+import mimg from "../../../src/assets/img/mimg.png";
 
 function Features() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/bookademo");
+  };
+
   return (
     <Layout>
-      <div>
+      <div className="mt-8 mb-8 font-sans bg-cover bg-center">
+        {/* heading */}
+        <div className="mt-40 mb-8 font-sans text-center">
+          <h1 className="text-4xl text-gray-700 font-bold mb-8">
+            We have the best solution <br /> for your business
+          </h1>
+        </div>
+        {/* features 1 */}
         <div className="mt-16 mb-2">
-          <div className="container w-auto h-auto border-none mx-auto  rounded-xl px-10 py-20">
-            <div className="grid grid-cols-3 gap-4  font-sans">
-              <div className="flex flex-col items-center">
-                <div className="-mt-8 text-center">
-                  <div className="mx-auto -mt-2 mb-2 flex justify-center">
-                    <GiArtificialIntelligence className="w-16 h-16 text-blue-800" />
-                  </div>
-                  <h2 className="font-bold text-xl  text-center  text-gray-700  mb-2">
-                    AI Powered:
-                  </h2>
-                  <p className="text-center  font-sans  text-md ">
-                    Let our cutting-edge, data-driven algorithms <br />
-                    guide you in making critical buy and sell <br />
-                    decisions. Leverage the power of AI to <br />
-                    enhance transparency.
-                  </p>
+          <div className="container mx-auto rounded-xl px-4 sm:px-10 py-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+                <div className="mb-4">
+                  <GiArtificialIntelligence className="w-16 h-16 text-blue-800" />
                 </div>
+                <h2 className="font-semibold text-2xl text-gray-700 mb-2">
+                  AI Powered
+                </h2>
+                <p className="text-center text-md">
+                  Let our cutting-edge, data-driven algorithms guide you in
+                  making critical buy and sell decisions. Leverage the power of
+                  AI to enhance transparency.
+                </p>
               </div>
 
-              <div className="flex flex-col items-center font-sans">
-                <div className="-mt-6 text-center">
-                  <div className="mx-auto flex justify-center mb-2">
-                    <GiCrystalGrowth className="w-12 h-12 text-blue-800" />
-                  </div>
-                  <h2 className="font-bold text-xl    text-gray-700 text-center mb-2">
-                    Profits Growth:
-                  </h2>
-                  <p className="text-center  font-sans  text-md ">
-                    Medsway stands for growth!
-                    <br />
-                    Our workflows are designed <br />
-                    to provide you with opportunities
-                    <br />
-                    at every turn to increase profitability
-                  </p>
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+                <div className="mb-4">
+                  <GiCrystalGrowth className="w-16 h-16 text-blue-800" />
                 </div>
+                <h2 className="font-semibold text-2xl text-gray-700 mb-2">
+                  Profits Growth
+                </h2>
+                <p className="text-center text-md">
+                  Medsway stands for growth! Our workflows are designed to
+                  provide you with opportunities at every turn to increase
+                  profitability.
+                </p>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="-mt-6">
-                  <div className="mx-auto  mb-2 flex justify-center">
-                    <SiSoundcharts className="w-16 h-16 text-blue-800 " />
-                  </div>
-                  <div>
-                    <h2 className="font-bold text-xl  font-sans  text-gray-700 text-center mb-2">
-                      Insights hub:
-                    </h2>
-                  </div>
-                  <div className="flex justify-center">
-                    <p className="  text-center font-sanstext-md  ">
-                      Monitor the pulse of your business <br />
-                      with single click dashboards.
-                      <br />
-                      Discover hidden insights and prepare <br />
-                      for uncertainties in advance.
-                    </p>
-                  </div>
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+                <div className="mb-4">
+                  <SiSoundcharts className="w-16 h-16 text-blue-800" />
                 </div>
+                <h2 className="font-semibold text-2xl text-gray-700 mb-2">
+                  Insights hub
+                </h2>
+                <p className="text-center text-md">
+                  Monitor the pulse of your business with single click
+                  dashboards. Discover hidden insights and prepare for
+                  uncertainties in advance.
+                </p>
               </div>
             </div>
           </div>
         </div>
-
-        <div className=" -mt-12">
-          <div className="container w-auto h-auto border-none mx-auto  rounded-xl px-10 py-20">
-            <div className="grid grid-cols-3 gap-4  font-sans">
-              <div className="flex flex-col items-center">
-                <div className="-mt-8 text-center">
-                  <div className="mx-auto  mb-2 flex justify-center">
-                    <FaStackOverflow className="w-16 h-16 text-blue-800" />
-                  </div>
-                  <h2 className="font-bold text-xl  text-center  text-gray-800  mb-2">
-                    Stock flow optimizer:
-                  </h2>
-                  <p className="text-center  font-sans  text-md ">
-                    Effective inventory management is <br />
-                    the cornerstone of successful supply
-                    <br />
-                    chain network. With Medsway's predictive <br />
-                    analytics you can build an effective stock
-                    <br />
-                    management strategy for any store size.
-                  </p>
+        {/* features 2 */}
+        <div className="mt-16 mb-2">
+          <div className="container mx-auto rounded-xl px-4 sm:px-10 py-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+                <div className="mb-4">
+                  <FaStackOverflow className="w-16 h-16 text-blue-800" />
                 </div>
+                <h2 className="font-semibold text-2xl text-gray-700 mb-2">
+                  Stock flow optimizer
+                </h2>
+                <p className="text-center text-md">
+                  Effective inventory management is the cornerstone of a
+                  successful supply chain network. With Medsway's predictive
+                  analytics, you can build an effective stock management
+                  strategy for any store size.
+                </p>
               </div>
 
-              <div className="flex flex-col items-center font-sans">
-                <div className="-mt-6 text-center">
-                  <div className="mx-auto flex justify-center mb-2">
-                    <GiWavyChains className="w-12 h-12 text-blue-800" />
-                  </div>
-                  <h2 className="font-bold text-xl    text-gray-800 text-center mb-2">
-                    Supply chain nexus:
-                  </h2>
-                  <p className="text-center  font-sans  text-md ">
-                    The adage goes like one <br/>
-                    size doesn't fit all...! <br/>
-                    With Medsway platform you can <br/>
-                    everage the vast network of <br/>
-                    suppliers to get the best deals <br/>
-                    on range of products.
-                  </p>
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+                <div className="mb-4">
+                  <GiWavyChains className="w-16 h-16 text-blue-800" />
                 </div>
+                <h2 className="font-semibold text-2xl text-gray-700 mb-2">
+                  Supply chain nexus
+                </h2>
+                <p className="text-center text-md">
+                  One size doesn't fit all! With Medsway platform, you can
+                  leverage the vast network of suppliers to get the best deals
+                  on a range of products.
+                </p>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="-mt-6">
-                  <div className="mx-auto  mb-2 flex justify-center">
-                    <LiaUsersSolid className="w-16 h-16 text-blue-800 " />
-                  </div>
-                  <div>
-                    <h2 className="font-bold text-xl  font-sans  text-gray-800 text-center mb-2">
-                      Customer experience catalyst:
-                    </h2>
-                  </div>
-                  <div className="flex justify-center">
-                    <p className="  text-center font-sanstext-md  ">
-                      Discover the exponential potential <br />
-                      of customer satisfaction in <br />
-                      enriching  your sales journey.<br/>
-                      Plug-in Medsway functionalities<br />
-                      to enhance customer experience <br/>
-                      and expanding your loyalty nexus.
-                      
-                    </p>
-                  </div>
+              <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6">
+                <div className="mb-4">
+                  <LiaUsersSolid className="w-16 h-16 text-blue-800" />
                 </div>
+                <h2 className="font-semibold text-2xl text-gray-700 mb-2">
+                  Customer experience catalyst
+                </h2>
+                <p className="text-center text-md">
+                  Discover the exponential potential of customer satisfaction in
+                  enriching your sales journey. Enhance customer experience and
+                  expand your loyalty nexus with Medsway functionalities.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        {/* guarantee  growth */}
+        <div className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-white to-cyan-200 p-6 shadow-lg rounded-lg width-full max-w-none mx-auto my-8">
+          {/* Left Side */}
+          <div className="md:w-1/2 text-center md:text-left mb-6 md:mb-0">
+            <h2 className="text-xl md:text-4xl font-bold text-gray-800">
+              Guaranteed top line and <br />
+              bottom line growth.
+            </h2>
+            <p className="mt-4 text-gray-700 text-lg">
+              With several segment-first features, Medsway delivers unique
+              insights to you,
+              <br />
+              enabling successful operations and discovery of hidden
+              <br />
+              opportunities in your pharmacy business.
+            </p>
+            <button
+              onClick={handleClick}
+              className="mt-6 px-4 py-2 bg-gray-600  text-white rounded hover:bg-blue-800 transition duration-300"
+            >
+              Book a Demo
+            </button>
+          </div>
 
-      <div>
-        <div className="font-sans flex justify-end ">
-          <a
-            href="/faqws"
-            target="_blank"
-            className="mr-10 mb-4 text-gray-900 font-bold border-2 w-50 h-50 bg-slate-300 px-2 py-2"
+          {/* Right Side */}
+          <div className="md:w-1/2 flex justify-center  p-4 rounded-lg shadow-md">
+            <img
+              src={mimg}
+              alt="Good Medicines"
+              className="w-3/4 h-auto object-cover rounded-lg"
+            />
+          </div>
+        </div>
+        {/* button faq */}
+        <div className="font-sans flex justify-end mb-4 mr-6">
+          <button
+            onClick={() => navigate("/faqws")}
+            className="flex items-center text-blue-800 focus:outline-none mt-4"
           >
-            FAQ's
-          </a>
+            <span className="text-lg">Go to FAQ's</span>
+            <RiArrowRightSLine className="ml-1" size={20} />
+          </button>
         </div>
       </div>
     </Layout>

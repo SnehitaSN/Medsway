@@ -1,159 +1,130 @@
 import React, { useState } from "react";
 import Layout from "../../components/layout/Layout";
 import { Card } from "@tremor/react";
-import { FaPlus } from "react-icons/fa6";
-import { FaMinus } from "react-icons/fa";
+import { BsQuestion } from "react-icons/bs";
+import { MdOutlineQuestionAnswer } from "react-icons/md";
+import "./Faqws.css"; // Import the custom CSS file
 
 function Faqws() {
-  const questions = [
-    "How do I grow my Business?",
-    "Can I cancel my subscription?",
-    "How do I contact the support?",
-    "Is a credit card required?",
+  const faqData = [
+    {
+      question: "Who is eligible to access Medsway platform and services?",
+      answer: `
+        Medsway platform is built for the pharmaceutical supply chain:
+        <ul>
+          <li> A.If you run a pharmacy</li>
+          <li> B.a distribution center</li>
+          <li> C.an agency</li>
+          <li> D.a pharmaceutical manufacturer</li>
+          <li> E.a healthcare practitioner</li>
+        </ul>
+        you can create an account and subscribe to suitable plans for accessing the Medsway platform.
+      `,
+    },
+    {
+      question: "What is the process for onboarding to Medsway?",
+      answer: `
+        The onboarding process includes:
+        <ul>
+          <li> A.Create an account if you are among the eligible groups.</li>
+          <li> B.Submit KYC documents after creating the account.</li>
+          <li> C.Upon verification, your account will be activated within 24-72 hrs.</li>
+        </ul>
+      `,
+    },
+    {
+      question:
+        "I am currently using an inventory management and billing solution. How can I still use Medsway?",
+      answer: `
+        You can avail Medsway intelligence platform in two ways:
+        <ul>
+          <li> A.One [recommended] way is to migrate your data and account to the Medsway platform. This can be done instantly and our ground staff will assist you with migration upon receiving request.</li>
+          <li> B.The second option is to avail our API endpoints which can be integrated with your existing tools to provide you with necessary data and support.
+           <li> C.Our API endpoint services are a part of customized solutions.</li>
+           Please write to us at <a href="mailto:support@medsway.in" className="text-blue-800 underline">support@medsway.in</a> for more details.</li>
+        </ul>
+      `,
+    },
+    {
+      question: "Is a credit card required?",
+      answer: `
+        No, a credit card is not mandatory:
+        <ul>
+          <li>An active bank account is necessary to avail all the services offered by the Medsway platform.</li>
+        </ul>
+      `,
+    },
   ];
 
-  //   const [showAnswer, setShowAnswer] = useState(null);
   const [expandedCard, setExpandedCard] = useState(null);
 
-  //   const handleToggleAnswer = (index) => {
-  //     setShowAnswer(showAnswer === index ? null : index);
-  //   };
-
-  const handleToggleAnswer = (cardId) => {
-    setExpandedCard(expandedCard === cardId ? null : cardId);
+  const handleToggleAnswer = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
   };
 
   return (
     <Layout>
       <div className="mt-40 mb-20">
-        <sectionf className="mt-20 mb-5">
-          <div className="grid grid-cols-2 gap-6 mb-8 mt-12 bg-blue-200 rounded-2xl">
-            <div className=" text-center mt-20">
-              <h2 className="mt-4 text-xl text-gray-800 font-sans font-semibold  mb-2">
-                Frequently Asked <br></br> Questions
+        <section className="mt-20 mb-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 mt-12 bg-blue-200 rounded-2xl">
+            <div className="text-center mt-20 px-6 md:px-0">
+              <h2 className="mt-4 text-xl text-gray-800 font-sans font-semibold mb-2">
+                Frequently Asked Questions
               </h2>
-              <p className="mt-1 text-lg font-sans font-semibold ml-2 text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing<br></br>{" "}
-                elit. Esse,similique! Fugiat architecto cum vero quidem.
+              <p className="mt-1 text-lg font-sans font-normal ml-2 text-gray-700">
+                Read through the FAQs and get your concerns addressed instantly.{" "}
+                <br />
+                More questions? You can always reach out to us at
+                <a
+                  href="mailto:support@medsway.in"
+                  className="text-blue-800 underline"
+                >
+                  {" "}
+                  support@medsway.in{" "}
+                </a>
+                and <br /> we will respond in the shortest possible time.
               </p>
             </div>
 
-            <div className="mr-8">
-              {questions.map((question, index) => (
-                <div key={index}>
+            <div className="mr-8 px-6 md:px-0">
+              {faqData.map((faq, index) => (
+                <div key={index} className="mb-6">
                   <Card
-                    className={`max-w-xs mx-auto px-6 py-4 bg-white flex flex-1 space-x-2 justify-center mb-6 rounded-3xl mt-8 cursor-pointer ${
+                    className={`max-w-full mx-auto mt-4 px-8 py-4 bg-white flex items-center justify-between rounded-2xl cursor-pointer ${
                       expandedCard === index ? "border border-indigo-500" : ""
                     }`}
                     decoration="top"
                     decorationColor="indigo"
                     onClick={() => handleToggleAnswer(index)}
                   >
-                    <div className="flex flex-1 justify-center space-x-6">
-                      <h2 className="text-md font-sans font-semibold text-gray-700">
-                        {question}
-                      </h2>
+                    <div className="text-lg font-sans font-semibold text-gray-700">
+                      {faq.question}
+                    </div>
+                    <div>
                       {expandedCard === index ? (
-                        <FaMinus className="mt-1 w-6 h-6 text-blue-800" />
+                        <MdOutlineQuestionAnswer
+                        className="text-blue-800"
+                        size={34}
+                      />
                       ) : (
-                        <FaPlus className="mt-1 w-6 h-6 text-blue-800" />
+                        <BsQuestion className="text-blue-800" size={34} />
+                       
                       )}
                     </div>
                   </Card>
                   {expandedCard === index && (
-                    <div className="text-center mt-2 font-sans  text-gray-700">
-                      This is the answer to {question}.
-                    </div>
+                    <Card className="max-w-full mx-auto px-4 py-4 bg-white mt-2 rounded-2xl overflow-y-auto max-h-40 custom-scroll">
+                      <div
+                        className="font-sans text-lg text-gray-700 text-left"
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      ></div>
+                    </Card>
                   )}
                 </div>
               ))}
-
-              {/* card 01 */}
-              {/* <Card
-                className="max-w-xs mx-auto px-6 py-4 cursor-pointer bg-white flex flex-1 space-x-2 justify-center mb-6 rounded-3xl mt-8"
-                decoration="top"
-                decorationColor="indigo"
-                onClick={() => handleToggleAnswer(1)}
-              >
-                <div className="flex flex-1 justify-center space-x-6">
-                  <h2 className="text-md font-body font-semibold text-black">
-                    How do i grow my Buisness?
-                  </h2>
-                  <FaMinus className="mt-1 w-6 h-6" />
-                </div>
-              </Card>
-              {showAnswer === 1 && (
-                <div className="text-center mt-2 text-gray-700">
-                  This is the answer to the question "How do i grow my
-                  Buisness?"
-                </div>
-              )} */}
-              {/* card 02 */}
-              {/* <Card
-                className="max-w-xs mx-auto px-8 py-6 cursor-pointer bg-white flex flex-1 space-x-2 justify-center mb-6 rounded-3xl mt-8"
-                decoration="top"
-                decorationColor="indigo"
-                onClick={() => handleToggleAnswer(1)}
-              >
-                <div className="flex flex-1 justify-center space-x-6">
-                  <h2 className="text-md font-body font-semibold text-black">
-                    Can i cancel my subscription?
-                  </h2>
-                  <FaPlus className="mt-1 w-6 h-6" />
-                </div>
-              </Card>
-              {showAnswer === 1 && (
-                <div className="text-center mt-2 text-gray-700">
-                  This is the answer to the question "Can i cancel my
-                  subscription?"
-                </div>
-              )} */}
-              {/* card 03 */}
-              {/* <Card
-                className="max-w-xs mx-auto px-8 py-6 cursor-pointer bg-white flex flex-1 space-x-2 justify-center mb-6 rounded-3xl mt-8"
-                decoration="top"
-                decorationColor="indigo"
-                onClick={() => handleToggleAnswer(1)}
-              >
-                <div className="flex flex-1 justify-center space-x-6">
-                  <h2 className="text-md font-body font-semibold text-black">
-                    How do i contact the support?
-                  </h2>
-                  <FaPlus className="mt-1 w-6 h-6" />
-                </div>
-              </Card>
-
-              {showAnswer === 1 && (
-                <div className="text-center mt-2 text-gray-700">
-                  This is the answer to the question "How do i contact the
-                  support?"
-                </div>
-              )} */}
-
-              {/* card 04 */}
-              {/* <Card
-                className="max-w-xs mx-auto px-8 py-6 cursor-pointer bg-white flex flex-1 space-x-2 justify-center mb-6 rounded-3xl mt-8"
-                decoration="top"
-                decorationColor="indigo"
-                onClick={() => handleToggleAnswer(1)}
-              >
-                <div className="flex flex-1 justify-center space-x-6">
-                  <h2 className="text-md font-semibold font-body mr-2 text-black">
-                    Is a credit card required ?
-                  </h2>
-                  <FaPlus className="mt-1 w-6 h-6" />
-                </div>
-              </Card>
-
-              {showAnswer === 1 && (
-                <div className="text-center mt-2 text-gray-700">
-                  This is the answer to the question "Is a credit card required
-                  ?"
-                </div>
-              )} */}
             </div>
           </div>
-        </sectionf>
+        </section>
       </div>
     </Layout>
   );

@@ -57,24 +57,24 @@ function Home() {
           />{" "} */}
           {/* SVG image */}
           <div className="mt-8 mb-8  font-sans mr-60">
-            <p className="text-4xl text-gray-700 font-extrabold text-center mb-8  mt-6 ">
+            <p className="text-4xl text-gray-700 font-bold text-center mb-8  mt-6 ">
               We have the best solution <br></br>for your buisness
             </p>
           </div>
           {/* solutions for your buisness section */}
           <div className="container w-auto h-auto border-none mx-auto mb-10 rounded-xl px-10 py-20 bg-cover bg-center ">
             <div className="grid grid-cols-3 gap-4 font-sans mr-20 ">
-              <div className="-mt-6 ">
+              <div className="-mt-9 ">
                 <div className="mx-auto flex flex-1 justify-start mr-1 mb-2">
                   <IoShieldCheckmarkSharp
                     className="w-16 h-16"
                     style={{ color: "#1e40af" }}
                   />
                 </div>
-                <h2 className="font-bold text-2xl text-gray-800  text-start mb-4">
+                <h2 className="font-semibold text-2xl text-gray-800  text-start mb-4">
                   High Security to protect<br></br> from piracy
                 </h2>
-                <p className="text-start  text-gray-700 text-md font-semibold ">
+                <p className="text-start  text-gray-700 text-md font-normal ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Autem, esse quasi consectetur nihil voluptate quod.
                 </p>
@@ -88,10 +88,10 @@ function Home() {
                   />
                 </div>
 
-                <h2 className="font-bold   text-gray-800 text-2xl text-start mb-4">
+                <h2 className="font-semibold   text-gray-800 text-2xl text-start mb-4">
                   Premium Quality <br></br> Performance
                 </h2>
-                <p className="text-start   text-gray-700 text-md font-semibold">
+                <p className="text-start   text-gray-700 text-md font-normal">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Autem, esse quasi consectetur nihil voluptate quod.
                 </p>
@@ -105,10 +105,10 @@ function Home() {
                   />
                 </div>
 
-                <h2 className="font-bold   text-gray-800 text-2xl text-start mb-4">
+                <h2 className="font-semibold   text-gray-800 text-2xl text-start mb-4">
                   Full time Customer <br></br> Support-24/7
                 </h2>
-                <p className="text-start   text-gray-700 text-md font-semibold ">
+                <p className="text-start   text-gray-700 text-md font-normal ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Autem, esse quasi consectetur nihil voluptate quod.
                 </p>
@@ -126,10 +126,10 @@ function Home() {
                     work with us?
                   </span>
                 </p>
-                <h2 className="text-gray-800  text-4xl font-extrabold mt-8">
+                <h2 className="text-gray-800  text-3xl font-semibold mt-4">
                   To upscale your buisness <br></br> to the next level
                 </h2>
-                <p className="text-gray-700  text-md font-semibold mt-6">
+                <p className="text-gray-700  text-md font-normal mt-4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                   <br></br>
                   Excepturi temporibus eius earum incidunt! Nemo vero<br></br>{" "}
@@ -142,7 +142,7 @@ function Home() {
                     className="w-10 h-10 mb-4 "
                     style={{ color: "#1e40af" }}
                   />
-                  <p className="flex flex-1   -mt-12 text-md font-semibold text-gray-700 ml-12 mb-4">
+                  <p className="flex flex-1   -mt-12 text-md font-normal text-gray-700 ml-12 mb-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ratione, mollitia.
                   </p>
@@ -153,7 +153,7 @@ function Home() {
                     className="w-10 h-10 mb-4 "
                     style={{ color: "#1e40af" }}
                   />
-                  <p className="flex flex-1   -mt-12 text-md  text-gray-700 font-semibold ml-12 mb-4">
+                  <p className="flex flex-1   -mt-12 text-md  text-gray-700 font-normal ml-12 mb-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ratione, mollitia.
                   </p>
@@ -164,7 +164,7 @@ function Home() {
                     className="w-10 h-10 mb-4 "
                     style={{ color: "#1e40af" }}
                   />
-                  <p className="flex flex-1   -mt-12 text-md  text-gray-700 font-semibold ml-12 mb-4">
+                  <p className="flex flex-1   -mt-12 text-md  text-gray-700 font-normal ml-12 mb-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ratione, mollitia.
                   </p>
@@ -188,7 +188,7 @@ function Home() {
                 facilis repellat quo expedita,<br></br> necessitatibus deserunt!
                 Doloribus tenetur voluptatibus ducimus modi, .
               </p>
-              <button className="bg-gray-500 px-7 py-3 mr-2 mt-6    text-white font-semibold rounded-lg  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-300 ... ">
+              <button className="bg-gray-500 px-7 py-3 mr-2 mt-6    text-white font-normal rounded-lg  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-300 ... ">
                 Get Free Trial
               </button>
             </div>
@@ -262,10 +262,10 @@ function Home() {
                 Discover
                 <span className=" text-tahiti   text-lg font-bold"> More</span>
               </p>
-              <h2 className=" text-gray-800    text-4xl font-normal mt-8">
+              <h2 className=" text-gray-800    text-4xl font-normal mt-6">
                 Analyze your Sales and <br></br> Marketing Leads
               </h2>
-              <p className=" text-gray-700   text-md font-normal mt-6">
+              <p className=" text-gray-700   text-md font-normal mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                 <br></br>
                 Excepturi temporibus eius earum incidunt! Nemo vero<br></br>{" "}
@@ -333,7 +333,7 @@ function Home() {
                   <GiArtificialIntelligence className="w-16 h-16 text-blue-800" />
                 </div>
                 <h2 className="font-bold text-xl  text-center  text-gray-700  mb-2">
-                  AI Powered:
+                  AI Powered
                 </h2>
                 <p className="text-center  font-sans  text-md ">
                   Let our cutting-edge, data-driven algorithms <br />
@@ -350,7 +350,7 @@ function Home() {
                   <GiCrystalGrowth className="w-12 h-12 text-blue-800" />
                 </div>
                 <h2 className="font-bold text-xl    text-gray-700 text-center mb-2">
-                  Profits Growth:
+                  Profits Growth
                 </h2>
                 <p className="text-center  font-sans  text-md ">
                   Medsway stands for growth!
@@ -370,7 +370,7 @@ function Home() {
                 </div>
                 <div>
                   <h2 className="font-bold text-xl  font-sans  text-gray-700 text-center mb-2">
-                    Insights hub:
+                    Insights hub
                   </h2>
                 </div>
                 <div className="flex justify-center">
