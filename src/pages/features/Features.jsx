@@ -10,7 +10,7 @@ import { LiaUsersSolid } from "react-icons/lia";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../components/layout/Layout";
-import mimg from "../../../src/assets/img/mimg.png";
+import group from "../../../src/assets/img/group.svg";
 
 function Features() {
   const navigate = useNavigate();
@@ -150,11 +150,11 @@ function Features() {
           </div>
 
           {/* Right Side */}
-          <div className="md:w-1/2 flex justify-center  p-4 rounded-lg shadow-md">
+          <div className="w-full md:w-3/4 lg:w-1/2 flex justify-center p-4 rounded-lg min-h-[500px]">
             <img
-              src={mimg}
+              src={group}
               alt="Good Medicines"
-              className="w-3/4 h-auto object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>

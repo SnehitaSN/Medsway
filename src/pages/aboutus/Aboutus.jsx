@@ -19,7 +19,7 @@ function Aboutus() {
             </p>
             <div className="flex justify-center mt-6">
               <a
-                href="https://www.linkedin.com/company/medsway"
+                href="https://www.linkedin.com/in/medsway-llp-37354231a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-600 text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-blue-800"
